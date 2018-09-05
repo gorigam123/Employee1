@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.ts.employee.dao.EmployeeDAOImple;
 import com.ts.employee.dto.EmployeeBean;
 
 public class SearchEmployee extends HttpServlet {
@@ -15,6 +16,8 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 	EmployeeBean bean = new EmployeeBean();
 	bean.setEid(Integer.parseInt(request.getParameter("eid")));
 	bean.setFname(request.getParameter("fname"));
+	EmployeeDAOImple daoCreate = new EmployeeDAOImple();
+	daoCreate.searchEmployee(bean);
 }
 
 }

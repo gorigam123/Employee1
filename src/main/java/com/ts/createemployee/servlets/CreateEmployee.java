@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.ts.employee.dao.EmployeeDAOImple;
 import com.ts.employee.dto.EmployeeBean;
 
 public class CreateEmployee extends HttpServlet {
@@ -22,11 +23,9 @@ public class CreateEmployee extends HttpServlet {
 		bean.setAddress2(request.getParameter("address2"));
 		bean.setCity(request.getParameter("city"));
 		bean.setPincode(Long.parseLong(request.getParameter("pincode")));
+		EmployeeDAOImple daoCreate = new EmployeeDAOImple();
+		daoCreate.createEmployee(bean);	
 	
-
-		
-
-		
 	}
 
 }

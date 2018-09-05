@@ -5,6 +5,7 @@ import java.security.PrivilegedActionException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.Statement;
 
 import org.omg.CORBA.Request;
@@ -49,6 +50,7 @@ public class EmployeeDAOImple implements EmployeeDAO{
 			
 			
 			
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -60,6 +62,20 @@ public class EmployeeDAOImple implements EmployeeDAO{
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/employee", "root", "root");
+			PreparedStatement pstmt1 = con.prepareStatement("select * from employeedata where eid = ? or name = ?");
+			pstmt1.setInt(1, bean.getEid());
+			pstmt1.setString(2, bean.getFname());
+			ResultSet res = pstmt1.executeQuery();
+			while(res.next())
+			{
+				int eid = res.getInt("eid");
+				String fname=res.getString("fname");
+				String lname=res.getString("lname");
+				System.out.println(eid);
+				System.out.println(fname);
+				System.out.println(lname);
+				
+			}
 			
 			
 		} catch (Exception e) {
