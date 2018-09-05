@@ -1,6 +1,6 @@
 <html>
 <body>
-<form action="./createEmployee" method="post">
+<form action="./CreateEmployee" method="post">
 	<table>
 		<tr>
 			<td>Emp Id</td>
