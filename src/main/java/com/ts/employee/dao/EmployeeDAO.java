@@ -1,6 +1,7 @@
 package com.ts.employee.dao;
 
 import com.ts.employee.dto.EmployeeBean;
+import com.ts.employee.dto.SearchEmployeeBean;
 
 public interface EmployeeDAO {
 	
@@ -10,5 +11,5 @@ public interface EmployeeDAO {
 
 	public void deleteEmployee(EmployeeBean Bean);
 
-	public void searchEmployee(EmployeeBean Bean);
+	public void searchEmployee(SearchEmployeeBean Bean);
 }

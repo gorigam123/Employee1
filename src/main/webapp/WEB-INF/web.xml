@@ -8,7 +8,7 @@
   	<servlet-name>CreateEmployee</servlet-name>
   	<display-name>CreateEmployee</display-name>
   	<description></description>
-  	<servlet-class>com.ts.createemployee.CreateEmployee</servlet-class>
+  	<servlet-class>com.ts.createemployee.servlets.CreateEmployee</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>UpdateEmployee</servlet-name>
@@ -26,7 +26,7 @@
   	<servlet-name>SearchEmployee</servlet-name>
   	<display-name>SearchEmployee</display-name>
   	<description></description>
-  	<servlet-class>com.ts.createemployee.SearchEmployee</servlet-class>
+  	<servlet-class>com.ts.createemployee.servlets.SearchEmployee</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>ReadingForm</servlet-name>

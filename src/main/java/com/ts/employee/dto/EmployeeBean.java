@@ -12,6 +12,13 @@ public class EmployeeBean implements Serializable {
 	private String address1;
 	private String address2;
 	private String city;
+	private String dob;
+	public String getDob() {
+		return dob;
+	}
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
 	private long phno;
 	private long pincode;
 	private String email;

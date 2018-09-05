@@ -15,6 +15,11 @@
 			<td><input type="text" name="lname"></td>
 		</tr>
 		<tr>
+			<td>Emp DOB</td>
+			<td><input type="text" name="dob" placeholder="dd-mm-yyyy"></td>
+		</tr>
+		
+		<tr>
 			<td>Emp Ph num</td>
 			<td><input type="number" name="phno"></td>
 		</tr>
