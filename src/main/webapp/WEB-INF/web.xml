@@ -14,13 +14,13 @@
   	<servlet-name>UpdateEmployee</servlet-name>
   	<display-name>UpdateEmployee</display-name>
   	<description></description>
-  	<servlet-class>com.ts.createemployee.UpdateEmployee</servlet-class>
+  	<servlet-class>com.ts.createemployee.servlets.UpdateEmployee</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>DeleteEmployee</servlet-name>
   	<display-name>DeleteEmployee</display-name>
   	<description></description>
-  	<servlet-class>com.ts.createemployee.DeleteEmployee</servlet-class>
+  	<servlet-class>com.ts.createemployee.servlets.DeleteEmployee</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>SearchEmployee</servlet-name>

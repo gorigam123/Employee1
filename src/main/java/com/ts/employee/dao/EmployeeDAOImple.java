@@ -10,6 +10,7 @@ import java.sql.Statement;
 
 import org.omg.CORBA.Request;
 
+import com.ts.employee.dto.DeleteEmployeeBean;
 import com.ts.employee.dto.EmployeeBean;
 import com.ts.employee.dto.SearchEmployeeBean;
 
@@ -62,24 +63,14 @@ public class EmployeeDAOImple implements EmployeeDAO{
 		
 	}
 
-	public void deleteEmployee(EmployeeBean bean) {
+	public void deleteEmployee(DeleteEmployeeBean bean) {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/employee_db", "root", "root");
-			PreparedStatement pstmt1 = con.prepareStatement("select * from employee_info where eid = ?");
+			PreparedStatement pstmt1 = con.prepareStatement("delete * from employee_info where eid = ?");
 			pstmt1.setInt(1, bean.getEid());
-			pstmt1.setString(2, bean.getFname());
-			ResultSet res = pstmt1.executeQuery();
-			while(res.next())
-			{
-				int eid = res.getInt("eid");
-				String fname=res.getString("fname");
-				String lname=res.getString("lname");
-				System.out.println(eid);
-				System.out.println(fname);
-				System.out.println(lname);
-				
-			}
+			int res = pstmt1.executeUpdate();
+		
 			
 			
 		} catch (Exception e) {
